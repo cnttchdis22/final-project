@@ -1,0 +1,75 @@
+
+header{
+  background: blue;
+  border: 2px solid goldenrod;
+}
+
+/*Navigation Style*/
+header{
+    background-color: #444;
+    overflow: hidden;
+    text color: white;
+    font-family: 'Abhaya Libre', serif;
+
+}
+
+.Nav1 a {
+    float: left;
+    display: block;
+    color: #f2f2f9;
+    text-align: center;
+    padding: 14px 100px;
+    text-decoration: none;
+    font-size: 17px;
+
+
+  }
+  .Nav2 a {
+      float: right;
+      display: block;
+      color: #f2f2f9;
+      text-align: left;
+      padding: 14px 100px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+  .Nav a:hover {
+      background-color: #ddd;
+      color: black;
+      background-color: #ddd;
+      color: black;
+    }
+.Images {
+
+}
+/*#For lower half */
+.Lower {
+  display: flex;
+  flex-wrap:nowrap;
+  flex direction: row;
+}
+
+.Left {
+  font-family: 'Abhaya Libre', serif;
+  flex-basis: 25%;
+  text-align: center;
+  display: inline-block;
+  overflow-y: scroll;
+  border: 2px solid goldenrod;
+}
+
+.Right{
+  font-family: 'Abhaya Libre', serif;
+  flex-basis: 75%;
+  display: inline-block;
+  border: 2px solid black;
+}
+footer{
+
+  background: #f2f2f2;;
+  color: white;
+  line-height: 50px;
+  padding: 0 20px;
+
+}
