@@ -1,4 +1,15 @@
 
+.image-2 {
+  display: none;
+}
+.image-3 {
+  display: none;
+}
+
+html,body {
+  margin: 0;
+
+}
 header{
   background: blue;
   border: 2px solid goldenrod;
@@ -10,9 +21,12 @@ header{
     overflow: hidden;
     text color: white;
     font-family: 'Abhaya Libre', serif;
+    font-style: oblique;
+}
+.Nav2 {
+right: 0;
 
 }
-
 .Nav1 a {
     float: left;
     display: block;
@@ -21,9 +35,8 @@ header{
     padding: 14px 100px;
     text-decoration: none;
     font-size: 17px;
-
-
   }
+
   .Nav2 a {
       float: right;
       display: block;
@@ -40,9 +53,48 @@ header{
       background-color: #ddd;
       color: black;
     }
-.Images {
+
+  .Nav {
+    position: fixed;
+    opacity: .9;
+
+  }
+ul,li{margin: 0; padding: 0}
+  #carousel {
+  	width:100%;
+  	height:450px;
+  	margin:0 auto;
+  }
+
+  #CarImages {
+  	overflow:hidden;
+  	position:relative;
+  	width:relative;
+  	height:350px;
+  	border:1px solid #ccc;
+  }
+  #CarImages ul {
+  	position:relative;
+  	left:0;
+  	top:0;
+  	list-style:none;
+  	margin:0;
+  	padding:0;
+  	width:750px;
+  }
+
+  #CarImages li {
+	width:250px;
+	height:250px;
+	float:left;
+}
+
+#CarImages li img {
+	position: relative;
 
 }
+
+
 /*#For lower half */
 .Lower {
   display: flex;
