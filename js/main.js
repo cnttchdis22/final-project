@@ -13,3 +13,8 @@ var imageSwitcher = function () {
   newImage[0].style.display = "block";
 
 };
+
+$(".Nav a").on("click" , function(){
+  $(".Nav a").removeClass("active");
+  $(this).toggleClass("active");
+});

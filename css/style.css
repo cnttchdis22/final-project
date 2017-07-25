@@ -8,11 +8,12 @@
 
 html,body {
   margin: 0;
-
+}
+body{
+  /*padding-top: 39px; /* to offset for main navigation */*/
 }
 header{
   background: blue;
-  border: 2px solid goldenrod;
 }
 
 /*Navigation Style*/
@@ -23,77 +24,120 @@ header{
     font-family: 'Abhaya Libre', serif;
     font-style: oblique;
 }
-.Nav2 {
-right: 0;
+#logo{
+  background-image: url("./images/Travel LOGO.png");
 
 }
-.Nav1 a {
-    float: left;
-    display: block;
-    color: #f2f2f9;
-    text-align: center;
-    padding: 14px 100px;
-    text-decoration: none;
-    font-size: 17px;
-  }
+.Nav{
+  position: fixed;
+  background: rgba(255,255,255,.5);
+  top: 40%;
+  z-index: 10;
+}
+.Nav a {
+  color: blue;
+  font-family: 'Abhaya Libre', serif;
+  font-style: oblique;
+  flex-grow: 1;
+  margin-left: 10px;
+  padding: 10px 0;
+  display: block;
+  text-decoration: none;
+  font-size: 17px;
+  -webkit-transition: background-color .2s linear;
+}
+.Nav a:before{
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: 2px solid blue;
+  margin-right: 5px;
+}
+.Nav a:hover,
+.Nav a.active {
+  color: black;
+}
+.Nav a:hover:before,
+.Nav a.active:before{
+  box-shadow: inset 0 0 0 3px blue;
+}
 
-  .Nav2 a {
-      float: right;
-      display: block;
-      color: #f2f2f9;
-      text-align: left;
-      padding: 14px 100px;
-      text-decoration: none;
-      font-size: 17px;
-    }
-
-  .Nav a:hover {
-      background-color: #ddd;
-      color: black;
-      background-color: #ddd;
-      color: black;
-    }
-
-  .Nav {
-    position: fixed;
-    opacity: .9;
-
-  }
 ul,li{margin: 0; padding: 0}
-  #carousel {
-  	width:100%;
-  	height:450px;
-  	margin:0 auto;
-  }
+#carousel {
+	width:100%;
+	margin:0 auto;
+}
+#carousel .container-fluid{
+  position: relative;
+}
+#carousel .container-fluid .banner{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  top: 0%;
+  text-align: center;
+  padding: 20px 10%;
+}
+#CarImages {
+	overflow:hidden;
+	position:relative;
+	width:relative;
+	height:350px;
+	border:1px solid #ccc;
+}
+#CarImages ul {
+	position:relative;
+	left:0;
+	top:0;
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:750px;
+}
 
-  #CarImages {
-  	overflow:hidden;
-  	position:relative;
-  	width:relative;
-  	height:350px;
-  	border:1px solid #ccc;
-  }
-  #CarImages ul {
-  	position:relative;
-  	left:0;
-  	top:0;
-  	list-style:none;
-  	margin:0;
-  	padding:0;
-  	width:750px;
-  }
-
-  #CarImages li {
-	width:250px;
-	height:250px;
-	float:left;
+#CarImages li {
+  width:250px;
+  height:250px;
+  float:left;
 }
 
 #CarImages li img {
 	position: relative;
 
 }
+.topDestinations h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 20px 10%;
 
+
+}
+.grid-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  text-align: center;
+  flex-direction: row;
+  padding: 10 10 10 10;
+
+  /*border: 1px solid black;*/
+}
+article {
+  display: inline-block;
+  text-align: center;
+	width: 31%;
+}
+.grid-wrapper img {
+  width: 400px;
+  height: 350px;
+
+}
 
 /*#For lower half */
 .Lower {
@@ -102,25 +146,127 @@ ul,li{margin: 0; padding: 0}
   flex direction: row;
 }
 
-.Left {
+/*.Left {
   font-family: 'Abhaya Libre', serif;
-  flex-basis: 25%;
-  text-align: center;
+  flex-basis: 20%;
+  text-align: left;
   display: inline-block;
   overflow-y: scroll;
-  border: 2px solid goldenrod;
+  border: 2px solid goldenrod;*/
 }
 
 .Right{
   font-family: 'Abhaya Libre', serif;
-  flex-basis: 75%;
+  text-align: center;
+  /*flex-basis: 80%;*/
   display: inline-block;
-  border: 2px solid black;
+  border: 1px solid black;
 }
-footer{
+.ambassRight{
+  font-family: 'Abhaya Libre', serif;
+  text-align: center;
+  border: 1px solid black;
+}
+.container {
+  justify-content: space-between;
+	color: black;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10 10 10 10;
+}
+.container img{
+  width: 100%;
+  height: auto;
 
+}
+.Right h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight:bold;
+  padding-top: 20px;
+}
+.trips {
+  margin: 10px;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  flex-grow: 1;
+  flex-basis: 200px;
+  max-width: 210px;
+}
+
+.tripsText{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  top: 0%;
+  opacity: .03;
+  text-align: center;
+  max-height: 210px;
+  max-width: 210px;
+  /*padding: 10px 10%;*/
+}
+.tripsText:hover  {
+  opacity: 1.0;
+  transition: opacity .55s ease-in-out;
+  -moz-transition: opacity .55s ease-in-out;
+  -webkit-transition: opacity .55s ease-in-out;
+}
+
+.ambassTrips {
+  margin: 20px;
+  box-sizing: border-box;
+  flex-direction: column;
+  /*position: relative;*/
+  text-align: center;
+  flex-grow: 1;
+  flex-basis: 200px;
+  max-width: 210px;
+}
+
+/*.ambassText{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  top: 0%;
+  opacity: .03;
+  text-align: center;
+  max-height: 210px;
+  max-width: 210px;*/
+
+/*Buttons*/
+button {
+	cursor: pointer;
+	outline: 0;
+	border: 2px solid #44545E;
+	color: #44545E;
+	padding: 8px 25.5px;
+	background-color: transparent;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 12.299px;
+	letter-spacing: 1.2px;
+	transition: all .3s ease-in-out;
+}
+
+button:hover {
+	background-color: #44545E;
+	color: white;
+	font-weight: 600;
+}
+
+footer{
   background: #f2f2f2;;
-  color: white;
+  text-align-last: center;
+  margin-left: auto;
+  text-align: right;
+  font-style: oblique;
   line-height: 50px;
   padding: 0 20px;
 
