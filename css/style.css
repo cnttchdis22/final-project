@@ -30,12 +30,12 @@ header{
 }
 .Nav{
   position: fixed;
-  background: rgba(255,255,255,.5);
-  top: 40%;
+  background: rgba(255,255,255,.1);
+  top: 30%;
   z-index: 10;
 }
 .Nav a {
-  color: blue;
+  color: black;
   font-family: 'Abhaya Libre', serif;
   font-style: oblique;
   flex-grow: 1;
@@ -52,7 +52,7 @@ header{
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  border: 2px solid blue;
+  border: 2px solid black;
   margin-right: 5px;
 }
 .Nav a:hover,
@@ -97,7 +97,7 @@ ul,li{margin: 0; padding: 0}
 	list-style:none;
 	margin:0;
 	padding:0;
-	width:750px;
+	/*width:750px;*/
 }
 
 #CarImages li {
@@ -134,7 +134,7 @@ article {
 	width: 31%;
 }
 .grid-wrapper img {
-  width: 400px;
+  width: 320px;
   height: 350px;
 
 }
@@ -144,15 +144,7 @@ article {
   display: flex;
   flex-wrap:nowrap;
   flex direction: row;
-}
 
-/*.Left {
-  font-family: 'Abhaya Libre', serif;
-  flex-basis: 20%;
-  text-align: left;
-  display: inline-block;
-  overflow-y: scroll;
-  border: 2px solid goldenrod;*/
 }
 
 .Right{
@@ -226,6 +218,10 @@ article {
   flex-basis: 200px;
   max-width: 210px;
 }
+li
+{
+  list-style: none;
+}
 
 /*.ambassText{
   position: absolute;
@@ -271,3 +267,10 @@ footer{
   padding: 0 20px;
 
 }
+
+/*@media only screen and (max-width: 400px) {
+  .grid-wrapper img{
+    width: auto;
+    height: 100px;
+  }
+}*/
